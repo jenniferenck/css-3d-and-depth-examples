@@ -3,13 +3,82 @@
 ==================================== */
 
 .button {
-	transition: background .3s;
+  transition: background 0.3s;
 }
 .button:hover {
-	background: rgba(74,137,202, 1);
+  background: rgba(74, 137, 202, 1);
 }
 
 /* ================================= 
   Photo 3D Transforms & Transitions
 ==================================== */
 
+/* FOR FLASHCARD VIEW */
+
+.photo {
+  transition: transform 1s ease-out;
+
+  /* child elements (side-a and side-b) can both be 3D now */
+  transform-style: preserve-3d;
+}
+
+.photo:hover {
+  transform: rotateY(180deg);
+}
+
+/* we need to hide the back so it doesn't cover side-b */
+.side-a {
+  backface-visibility: hidden;
+}
+
+/* we need to rotate side-b  */
+.side-b {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+/* CUBE ROTATION EXAMPLE */
+
+.cube-container {
+  perspective: 800px;
+}
+
+.cube {
+  /* background-color: darkblue; */
+  transition: transform 2s ease-in-out;
+  transform-style: preserve-3d;
+  /* position: relative; */
+  height: 200px;
+  width: 200px;
+}
+
+.cube:hover {
+  transform: rotateY(-270deg);
+}
+
+/* for front, back, left, right */
+.cube-side {
+  border: solid black 1px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.front {
+  background-color: aquamarine;
+}
+
+.left {
+  background-color: peachpuff;
+  transform: rotateY(90deg);
+}
+
+.right {
+  background-color: yellowgreen;
+  transform: rotateY(-90deg);
+}
+
+.back {
+  background-color: lightgreen;
+  transform: rotateY(180deg);
+}
