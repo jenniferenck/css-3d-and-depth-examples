@@ -42,13 +42,15 @@
 .cube-container {
   display: flex;
   justify-content: center;
-  margin: 1em;
+  margin: 7em;
   perspective: 800px;
 }
 
 .cube {
   /* background-color: darkblue; */
+  transform: rotate3d(0, 1, 1, 70deg);
   transition: transform 2s ease-in-out;
+  /* transform: rotateX(20deg); */
   transform-style: preserve-3d;
   /* position: relative; */
   height: 200px;
