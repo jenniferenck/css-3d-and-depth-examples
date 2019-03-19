@@ -34,13 +34,13 @@
 
 .stacking-back {
   background-color: lightgreen;
-  transform: translateZ(-100px) rotateY(180deg);
+  transform: translateZ(-100px);
   transform-origin: center left;
 }
 
 .stacking-left {
   background-color: peachpuff;
-  transform: rotateY(-300deg) translateX(100px);
+  transform: translateZ(-300px);
   transform-origin: top right;
 }
 
