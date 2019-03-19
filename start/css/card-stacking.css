@@ -1,10 +1,10 @@
 /* gives appearance that all sides are stacked based on what is closest */
 
-.cube-container {
+.stacking-cube-container {
   perspective: 800px;
 }
 
-.cube {
+.stacking-cube {
   /* background-color: darkblue; */
   transition: transform 2s ease-in-out;
   transform-style: preserve-3d;
@@ -13,38 +13,38 @@
   width: 200px;
 }
 
-.cube:hover {
+.stacking-cube:hover {
   transform: rotateY(-270deg);
 }
 
 /* for front, back, left, right */
-.cube-side {
+.stacking-cube-side {
   border: solid black 1px;
   height: 100%;
   width: 100%;
   position: absolute;
 }
 
-.front {
+.stacking-front {
   background-color: aquamarine;
   /* gives front perception of being closest than back 
       if we were to give the other sides negative or smaller px, they will stack in that order*/
   transform: translateZ(100px);
 }
 
-.back {
+.stacking-back {
   background-color: lightgreen;
   transform: translateZ(-100px) rotateY(180deg);
   transform-origin: center left;
 }
 
-.left {
+.stacking-left {
   background-color: peachpuff;
   transform: rotateY(-300deg) translateX(100px);
   transform-origin: top right;
 }
 
-.right {
+.stacking-right {
   background-color: yellowgreen;
   transform: translateZ(-500px);
   /* transform: rotateY(-90deg); */
