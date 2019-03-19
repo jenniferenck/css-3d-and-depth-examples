@@ -53,7 +53,7 @@
 }
 
 .cube:hover {
-  transform: rotateY(-270deg);
+  transform: rotateX(-270deg);
 }
 
 /* for front, back, left, right */
@@ -66,19 +66,23 @@
 
 .front {
   background-color: aquamarine;
-}
-
-.left {
-  background-color: peachpuff;
-  transform: rotateY(90deg);
-}
-
-.right {
-  background-color: yellowgreen;
-  transform: rotateY(-90deg);
+  /* gives front perception of being closest than back 
+    if we were to give the other sides negative or smaller px, they will stack in that order*/
+  transform: translateZ(100px);
 }
 
 .back {
   background-color: lightgreen;
-  transform: rotateY(180deg);
+  /* gives the appearance of being further back facing backwards */
+  transform: translateZ(-100px) rotateY(180deg);
+}
+
+.left {
+  background-color: peachpuff;
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.right {
+  background-color: yellowgreen;
+  transform: rotateY(-90deg) translateZ(100px);
 }
