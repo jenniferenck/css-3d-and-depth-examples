@@ -30,20 +30,24 @@
   /* gives front perception of being closest than back 
       if we were to give the other sides negative or smaller px, they will stack in that order*/
   transform: translateZ(100px);
+  /* transform origin??? */
 }
 
 .back {
   background-color: lightgreen;
   /* gives the appearance of being further back facing backwards */
   transform: translateZ(-100px) rotateY(180deg);
+  /* transform origin??? */
 }
 
 .left {
   background-color: peachpuff;
   transform: rotateY(90deg) translateZ(100px);
+  /* transform origin??? */
 }
 
 .right {
   background-color: yellowgreen;
   transform: rotateY(-90deg) translateZ(100px);
+  /* transform origin??? */
 }
