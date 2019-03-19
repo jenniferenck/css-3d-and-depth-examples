@@ -32,19 +32,20 @@
   transform: translateZ(100px);
 }
 
+.back {
+  background-color: lightgreen;
+  transform: translateZ(-100px) rotateY(180deg);
+  transform-origin: center left;
+}
+
 .left {
   background-color: peachpuff;
-  transform: translateZ(-100px);
+  transform: rotateY(-300deg) translateX(100px);
+  transform-origin: top right;
 }
 
 .right {
   background-color: yellowgreen;
-  transform: translateZ(-300px);
-  /* transform: rotateY(-90deg); */
-}
-
-.back {
-  background-color: lightgreen;
   transform: translateZ(-500px);
-  /* transform: rotateY(180deg); */
+  /* transform: rotateY(-90deg); */
 }
