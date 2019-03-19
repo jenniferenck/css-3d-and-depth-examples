@@ -40,6 +40,9 @@
 /* CUBE ROTATION EXAMPLE */
 
 .cube-container {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
   perspective: 800px;
 }
 
