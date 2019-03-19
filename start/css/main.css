@@ -62,13 +62,23 @@ p {
 /* #1.
  to activate/ allow 3d, we need the container to have perspective */
 .content {
+  /* adjusting the perspective UP makes you feel closer while DOWN gives a perception of farther depth  */
   perspective: 700px;
 }
 
 /* #2. 
  now, we can add some 3d effect to the individual photo containers */
 .photo-container {
-  transform: rotateY(25deg);
+  /* NOTE: you can only use one rotation per element */
+
+  /* Y tilts objects on a vertical axis (like a door) */
+  /* transform: rotateY(35deg); */
+
+  /* X tilts objects on a horizontal axis, appearing to tilt FWD and BWD  */
+  transform: rotateX(-35deg);
+
+  /* Z tilts objects in clockwise or counter-clockwise directions */
+  /* transform: rotateZ(25deg); */
 }
 
 .name {
