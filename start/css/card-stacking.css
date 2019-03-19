@@ -2,6 +2,9 @@
 
 .stacking-cube-container {
   perspective: 800px;
+  display: flex;
+  justify-content: center;
+  margin: 3em;
 }
 
 .stacking-cube {
